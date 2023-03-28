@@ -69,8 +69,10 @@ function App() {
   if(Lat==0)
   {
       return(
-        <div>
-          <h2>Weather APP</h2>
+        <div className="w-[100vw] h-[100vh] bg-[#181D31] text-white">
+        <div className="pt-3 ">
+        <h2 className="text-center  text-white">Weather APP</h2>
+      </div>
           <GrantLocation setCords={setCordsDataHandler} ></GrantLocation>
         </div>
       )
@@ -79,8 +81,10 @@ function App() {
   if(Tab==false)
   {
     return (
-      <div>
-        <h2>Weather APP</h2>
+      <div className="w-[100vw] h-[100vh] bg-[#181D31] text-white">
+        <div className="pt-3 ">
+        <h2 className="text-center  text-white">Weather APP</h2>
+      </div>
         <Button  tabHandler={tabHandler} ></Button>
         <SearchWeather  getCityData={getWeatherWithCity}/>
         <RenderWeather Data={searchLocationData} ></RenderWeather>
@@ -89,8 +93,10 @@ function App() {
     );
   }
   return(
-    <div>
-        <h2>Weather APP</h2>
+    <div className="w-[100vw] h-[100vh] bg-[#181D31] text-white">
+      <div className="pt-3 ">
+        <h2 className="text-center  text-white">Weather APP</h2>
+      </div>
         <Button  tabHandler={tabHandler} ></Button>
         <RenderWeather Data={myLocationData} ></RenderWeather>
     </div>
