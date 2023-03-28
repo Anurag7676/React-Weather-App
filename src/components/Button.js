@@ -1,10 +1,16 @@
 import React from 'react'
 
-const Button = ({tabHandler}) => {
+const Button = (props) => {
+  let tabHandler= props.tabHandler;
+  let searchLocationData= props.searchLocationData;
+  let setSearchLocationData=props.setSearchLocationData;
+
 
   function myLocationHandler()
   {
+
     tabHandler(true);
+    setSearchLocationData(null);
   }
   function searchButton()
   {

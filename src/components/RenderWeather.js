@@ -17,32 +17,32 @@ const RenderWeather = (props) => {
 
   
     return (
-    <div className=' mt-10 flex items-center justify-center flex-col'>
+    <div className=' mt-10 bg-[#181D31] flex items-center justify-center flex-col'>
         <div className='flex gap-20  justify-between items-center'>
         <h2 className='text-[2rem] '>{cityName}</h2>
         <div className='w-[20%]'><img src={nationalFlag} alt="" /></div>
         </div>
         {/* sky */}
-        <div className='flex-col'>
+        <div className=' md:min-w-[8rem]  flex flex-col items-center justify-center  '>
         <h2 className='text-[1.4rem] mt-1'>{decs}</h2>
-        <img className=' relative left-4  ' src={weatherIcon} alt="" />
+        <img className=' 'src={weatherIcon} alt="" />
         </div>
 
         <h3 className='text-[2rem]'>{temp}</h3>
         
         {/* cards */}
-        <div className='flex flex-wrap gap-10'>
-            <div className='bg-[#245953] p-5 '>
+        <div className='grid grid-cols-1 sm:grid-cols-2	 md:grid md:grid-cols-3  justify-center  p-10 gap-10'>
+            <div className='bg-[#245953] p-5 min-w-[20%] border-2 '>
                 <img src="" alt="" />
                 <h3>Wind Speed</h3>
                 <h3>{windSpeed}</h3>
             </div>
-            <div className='bg-[#245953] p-5 '>
+            <div className='bg-[#245953] p-5 min-w-[20%] border-2 '>
                 <img src="" alt="" />
                 <h3>Humidity</h3>
                 <h3>{humidity}</h3>
             </div>
-            <div className='bg-[#245953] p-5  '>
+            <div className='bg-[#245953] p-5 min-w-[20%] border-2 '>
                 <img src="" alt="" />
                 <h3>Cloud</h3>
                 <h3>{cloud}</h3>
